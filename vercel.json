@@ -1,9 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
+  "outputDirectory": "public",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/sse",
+      "destination": "/api"
+    },
+    {
+      "source": "/message",
+      "destination": "/api"
+    },
+    {
+      "source": "/health",
       "destination": "/api"
     }
   ],
